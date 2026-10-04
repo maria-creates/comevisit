@@ -1,0 +1,32 @@
+:root{color-scheme:light;--edge:clamp(16px,2.778vw,40px);--gap:12px;--screen:810px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:#fff;color:#000;font-family:Arial,Helvetica,sans-serif;font-weight:400}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible{outline:2px solid #486e93;outline-offset:6px}header{position:fixed;z-index:20;top:0;width:100%;padding:26px clamp(20px,3.889vw,56px) 20px;background:#fff}nav{display:flex;align-items:center;gap:28px;font-size:16px;width:max-content;max-width:100%}nav a:not(.pill){white-space:nowrap;text-underline-offset:4px}nav a[aria-current="location"]:not(.pill){text-decoration:underline}.pill{padding:10px 18px;border-radius:50px;background:#000;color:#fff;white-space:nowrap}.pill:hover,.gas:hover{background:#333}.screen{height:var(--screen);position:relative;max-width:1600px;margin:auto;scroll-margin-top:0}.greeting{position:absolute;top:143px;left:8.333%;width:83.334%;text-align:center}h1,h2,p{margin:0}h1 img,h2 img{display:block;max-width:100%;height:auto;margin:auto;width:988px}h2 img{width:1054px}.greeting p{font-size:28px;line-height:36px;margin-top:24px}.sofa{position:absolute;top:345px;left:5%;width:90%;height:420px}model-viewer{width:100%;height:100%;background:transparent;--poster-color:transparent}.sofa-poster{width:100%;height:100%;object-fit:contain}.next:hover,.next{position:absolute;top:757px;left:0;width:100%;text-align:center;font-size:16px}.gallery{position:absolute;top:112px;left:var(--edge);right:var(--edge);height:640px;display:grid;gap:var(--gap)}.gallery-column{display:flex;flex-direction:column;gap:var(--gap);min-width:0}.tile{border-radius:12px;min-height:0;overflow:hidden}.tile img{width:100%;height:100%;object-fit:cover;display:block}.contact .greeting{top:211px}.gas{position:absolute;top:462px;left:50%;transform:translateX(-50%);background:#000;color:#fff;border:0;border-radius:300px;padding:60px 96px 70px;font-size:72px;line-height:83px}.contact-note{position:absolute;top:710px;text-align:center;width:100%;font-size:16px;color:#666}.skip{position:fixed;top:-100px;z-index:30;background:#000;color:white;padding:12px}.skip:focus{top:0}@media(min-width:1600px){header{padding-left:calc((100vw - 1600px)/2 + 56px)}}@media(max-width:900px){:root{--screen:760px;--gap:10px}header{padding:20px}nav{gap:20px;font-size:14px}.greeting{top:140px;left:5%;width:90%}.greeting p{font-size:22px;line-height:30px}.sofa{left:5%;width:90%;top:320px;height:350px}.next{top:auto;bottom:26px}.gallery{height:590px;top:110px}.gallery[data-gallery="2"]{--gap:8px}.contact .greeting{top:190px}.gas{top:390px;font-size:60px;padding:44px 80px}.contact-note{top:630px}}@media(max-width:600px){:root{--screen:720px;--gap:8px}header{padding:16px}nav{gap:14px;font-size:12px;width:100%;justify-content:space-between}.pill{padding:10px 12px}.greeting{top:140px}.greeting p{font-size:18px;line-height:26px;margin-top:22px}.sofa{top:300px;height:300px}.gallery{position:relative;top:100px;left:auto;right:auto;margin:0 var(--edge);height:auto;display:block;columns:2;column-gap:8px}.gallery-column{display:contents}.tile{break-inside:avoid;margin-bottom:8px;height:var(--mobile-height)!important}.photos{height:auto;min-height:720px;padding-bottom:140px}.contact .greeting{top:180px}.gas{top:350px;font-size:54px;padding:35px 65px;line-height:70px}.contact-note{top:570px;padding:0 20px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.tile{position:relative;display:flex;align-items:center;justify-content:center;padding:16px;color:#525252;text-align:center;font-size:16px;line-height:22px}.gallery[data-gallery="0"] .tile{font-size:18px;line-height:26px}.tile:has(img){padding:0}.contact-map{position:absolute;top:703px;left:50%;transform:translateX(-50%);font-size:16px;white-space:nowrap;text-decoration:underline;text-underline-offset:3px}.gas{display:block;text-align:center}@media(max-width:900px){.contact-map{top:620px}}@media(max-width:600px){.contact-map{top:550px;font-size:14px}.sofa{left:0;width:100%;height:310px;top:300px}.tile{font-size:14px;line-height:20px}.gallery[data-gallery="0"] .tile{font-size:14px;line-height:20px}}
+
+model-viewer{opacity:0;pointer-events:none}model-viewer.is-ready{opacity:1;pointer-events:auto}
+
+/* Phone layout keeps content in normal flow, including small screens. */
+@media(max-width:600px){
+ html{scroll-padding-top:124px}
+ header{padding:12px 20px;background:#fff}
+ nav{display:grid;grid-template-columns:auto auto auto;justify-content:start;align-items:center;gap:0 20px;width:100%;font-size:14px}
+ nav a:not(.pill){display:flex;align-items:center;min-height:44px}
+ nav .pill{grid-column:1/-1;justify-self:start;min-height:44px;padding:12px 18px}
+ .hero{height:auto;min-height:100svh;display:flex;flex-direction:column;padding:152px 20px 32px;gap:24px}
+ .hero .greeting,.contact .greeting{position:static;left:auto;top:auto;width:100%}
+ .greeting p{font-size:18px;line-height:26px;margin-top:24px}
+ .hero .sofa{position:relative;left:auto;top:auto;width:calc(100% + 40px);margin:0 -20px;height:clamp(260px,45svh,380px);flex:none}
+ .next,.next:hover{position:static;top:auto;bottom:auto;margin-top:auto;display:flex;align-items:center;justify-content:center;min-height:44px;font-size:14px}
+ .photos{min-height:0;height:auto;padding:124px 0 36px}
+ .gallery{top:auto;margin:0 16px;columns:2;column-gap:8px}
+ .tile{height:auto!important;aspect-ratio:var(--tile-ratio);padding:12px;font-size:14px;line-height:20px}
+ .gallery[data-gallery="0"] .tile{font-size:14px;line-height:20px}
+ .tile img{position:absolute;inset:0}
+ .contact{height:auto;min-height:80svh;display:flex;flex-direction:column;align-items:center;padding:152px 20px 64px;gap:32px}
+ .gas{position:static;transform:none;align-self:center;margin-top:16px;padding:32px 64px;font-size:54px;line-height:64px}
+ .contact-map{position:static;transform:none;white-space:normal;text-align:center;font-size:14px;line-height:22px;display:flex;align-items:center;min-height:44px;max-width:100%}
+}
+@media(min-width:601px) and (max-width:900px){
+ .gallery{height:640px}.screen.photos{height:810px}
+}
+
+@media(max-width:600px){.tile:not(:has(img)){min-height:84px}}
