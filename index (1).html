@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Приезжай к нам в гости в Петербург. Квартира, район и наши любимые места.">
+<title>привет, дружок!</title>
+<meta property="og:title" content="привет, дружок!">
+<meta property="og:description" content="Приезжай к нам в гости в Петербург. Квартира, район и наши любимые места.">
+<meta property="og:type" content="website">
+<meta name="twitter:title" content="привет, дружок!">
+<meta name="twitter:description" content="Приезжай к нам в гости в Петербург. Квартира, район и наши любимые места.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='black'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='44' fill='white' font-family='Georgia'%3Eд%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script>self.ModelViewerElement={dracoDecoderLocation:'assets/draco/'};</script>
+<script type="module" src="assets/model-viewer.min.js"></script>
+<script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#apartment">к фотографиям</a>
+<header><nav aria-label="главное меню"><a href="#apartment" data-section="apartment">квартира</a><a href="#district" data-section="district">район</a><a href="#more" data-section="more">а что еще (?)</a><a class="pill" href="https://t.me/Mariiabb" target="_blank" rel="noopener" data-section="contact">написать нам</a></nav></header>
+<main>
+<section id="hello" class="screen hero" data-nav="apartment" aria-labelledby="hello-title">
+<div class="greeting"><h1 id="hello-title"><img src="assets/hello.svg" alt="привет, дружок!" width="988" height="110"></h1><p>приезжай к нам в гости в славный город Петербург!<br>тебя ждет вот такой роскошный диван...</p></div>
+<div class="sofa"><model-viewer src="assets/kivik.glb" reveal="manual" alt="Синий диван IKEA KIVIK с шезлонгом. Поворачивайте модель мышью или пальцем." camera-controls disable-zoom touch-action="pan-y" camera-orbit="25deg 72deg 90%" field-of-view="30deg" shadow-intensity="0" exposure="1" interaction-prompt="auto" loading="eager"><span slot="poster"></span><span slot="progress-bar"></span></model-viewer></div>
+<a class="next" href="#apartment">и еще пару прикольных штук...</a>
+</section>
+<section id="apartment" class="screen photos" data-nav="apartment" aria-label="квартира"><div class="gallery" data-gallery="0"></div></section>
+<section id="district" class="screen photos" data-nav="district" aria-label="район"><div class="gallery" data-gallery="1"></div></section>
+<section id="more" class="screen photos" data-nav="more" aria-label="а что еще посмотрим"><div class="gallery" data-gallery="2"></div></section>
+<section id="contact" class="screen contact" data-nav="contact" aria-labelledby="contact-title"><div class="greeting"><h2 id="contact-title"><img src="assets/when.svg" alt="когда приедешь?" width="1054" height="110"></h2><p>уже сегодня или только завтра?</p></div><a class="gas" href="https://ticket.rzd.ru/main" target="_blank" rel="noopener">газ!</a><a class="contact-map" href="https://yandex.ru/maps/?ll=30.314988%2C59.975792&amp;z=17&amp;pt=30.314988%2C59.975792%2Cpm2rdm" target="_blank" rel="noopener">посмотреть, где мы на яндекс картах</a></section>
+</main>
+</body></html>
